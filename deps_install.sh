@@ -16,7 +16,7 @@ cd netcdf-fortran-4.5.2 &&
 ./configure --prefix=/usr/local &&
 make && make install && cd .. &&
 
-tar -zxf eccodes-2.17.0-Source.gz &&
+tar -zxf eccodes-2.17.0-Source.tar.gz &&
 cd build &&
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PYTHON=ON -DENABLE_FORTRAN=ON ../eccodes-2.17.0-Source &&
 make && make install && cd .. &&
