@@ -92,7 +92,7 @@ O_LEV_DBG = g # [0,g]
 
 ## LIBRARIES
 #LIBS = -lgrib_api_f90 -lgrib_api -lm -ljasper -lnetcdff
-LIBS = -leccodes_f90 -leccodes -lm -ljasper $(NCOPT)
+LIBS = -lgrib_api_f90 -lgrib_api -lm -ljasper $(NCOPT)
 
 FFLAGS   = -I$(INCPATH1) -I$(INCPATH2) -O$(O_LEV) -g -cpp -m64 -mcmodel=medium -fconvert=little-endian -frecord-marker=4 -fmessage-length=0 -flto=jobserver -O$(O_LEV) $(NCOPT) $(FUSER)  #-Warray-bounds -fcheck=all # -march=native
 
