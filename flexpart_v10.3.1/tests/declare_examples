@@ -1,0 +1,54 @@
+#!/bin/bash
+
+
+#group 1
+#declare -a  examples1=('1-1_1' '1-2_2' '1-3_3' '1-4_3')
+#declare -a  units1=('conc' 'pptv' 'conc' 'pptv')
+#declare -a  examples1=('1-1' '1-2' '1-3' '1-3' '1-5')
+declare -a  examples1=('1-1_1' '1-2_2' '1-3_3' '1-3_3' '1-5_5')
+declare -a  units1=('conc' 'pptv' 'conc' 'pptv' 'conc')
+
+#group 2
+declare -a  examples2=('2-1_bwd' '2-2_bwd5')
+declare -a  units2=('time' 'time')
+
+
+
+
+#group 4
+declare -a  examples4=('4-1_ind_1_2' '4-2_ind_2_1' '4-3_ind_2_2' '4-4_bwd_ind_1_2' '4-5_bwd_ind_2_1' '4-6_bwd_ind_2_2' )
+declare -a  units4=('conc' 'conc' 'conc'  'time' 'time' 'time')
+
+#group 5
+declare -a  examples5=('5-1_specNO' '5-2_specAERO-TRACE' '5-3_specCO' '5-4_specBC' '5-5_bwd_specNO' )
+declare -a  units5=('conc' 'conc' 'conc'  'conc' 'time')
+
+
+declare -a  examples6=('6-1_nested' '6-2_nested_bwd' '6-3_nested1' '6-4_nested1_bwd' )
+declare -a  units6=('conc' 'time' 'conc'  'time')
+
+declare -a  examples7=('7-1_DOMAINFILL')
+declare -a  units7=('conc')
+
+
+#options_8-1_init_cond/
+#options_8-2_init_cond_surf/
+#options_8-3_init_cond_ind_2_1/
+#options_8-4_init_cond_ind_1_2/
+#options_8-5_init_cond_ind_2_2/
+
+declare -a  examples8=('8-1_init_cond' '8-2_init_cond_surf' '8-3_init_cond_ind_2_1' '8-4_init_cond_ind_1_2' '8-5_init_cond_ind_2_2' )
+declare -a  units8=('time' 'time' 'time'  'time' 'time')
+
+#output_9-1_CBLFLAG/
+#output_9-2_CBLFLAG_bwd/
+
+declare -a  examples9=('9-1_CBLFLAG' '9-2_CBLFLAG_bwd')
+declare -a  units9=('conc' 'time')
+
+
+
+examples=("${examples1[@]}" "${examples2[@]}" "${examples4[@]}" "${examples5[@]}" "${examples6[@]}" "${examples7[@]}" "${examples8[@]}" "${examples9[@]}")
+units=("${units1[@]}" "${units2[@]}" "${units4[@]}" "${units5[@]}" "${units6[@]}" "${units7[@]}" "${units8[@]}" "${units9[@]}" )
+
+
