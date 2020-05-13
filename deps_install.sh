@@ -1,6 +1,11 @@
 #!/bin/bash
 cd deps &&
 
+tar -zxf jasper-2.0.14.tar.gz &&
+cd build-jasper &&
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ../jasper-2.0.14 &&
+make && make install && cd .. &&
+
 tar -zxf hdf5-1.8.21.tar.gz &&
 cd hdf5-1.8.21 &&
 ./configure --prefix=/usr/local &&
@@ -18,6 +23,8 @@ make && make install && cd .. &&
 
 tar -zxf eccodes-2.17.0-Source.tar.gz &&
 cd build &&
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PYTHON=ON -DENABLE_FORTRAN=ON ../eccodes-2.17.0-Source &&
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PYTHON=ON -DENABLE_FORTRAN=ON -DBUILD_SHARED_LIBS=BOTH ../eccodes-2.17.0-Source &&
 make && make install && cd .. &&
-pip3 install --install-option="--prefix=/usr/local/share/eccodes" eccodes 
+pip3 install eccodes && cd .. &&
+
+cd flexpart_v10.3.1/src && make serial ncf=yes
