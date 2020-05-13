@@ -20,4 +20,4 @@ tar -zxf eccodes-2.17.0-Source.tar.gz &&
 cd build &&
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PYTHON=ON -DENABLE_FORTRAN=ON ../eccodes-2.17.0-Source &&
 make && make install && cd .. &&
-pip3 install --install-option="--prefix=/usr/local" eccodes 
+pip3 install --install-option="--prefix=/usr/local/share/eccodes" eccodes 
