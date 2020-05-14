@@ -21,7 +21,7 @@ cd netcdf-fortran-4.5.2 &&
 ./configure --prefix=/usr/local &&
 make && make install && cd .. &&
 
-tar grib_api-1.28.0-Source.tar.gz &&
+tar -zxf grib_api-1.28.0-Source.tar.gz &&
 cd grib_api-1.28.0-Source &&
 ./configure --prefix=/usr/local &&
 make && make install && cd .. &&
