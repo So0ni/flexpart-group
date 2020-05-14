@@ -1,8 +1,8 @@
 #!/bin/bash
 cd deps &&
 
-tar -zxf jasper-1.900.29.tar.gz &&
-cd jasper-1.900.29 &&
+tar -zxf jasper-1.900.2.tar.gz &&
+cd jasper-1.900.2 &&
 ./configure --prefix=/usr/local &&
 make && make install && cd .. &&
 
@@ -32,4 +32,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PYTHON=ON -DENABLE_FORTRAN=ON -
 make && make test && make install && cd .. &&
 pip3 install eccodes && cd .. &&
 
-cd flexpart_v10.3.1/src && make serial ncf=yes
+wget https://www.flexpart.eu/downloads/66 -O flexpart_v10.4.tar &&
+tar -xf flexpart_v10.4.tar && mv flexpart_v10.4_3d7eebf flexpart_v10.4 &&
+
+cd flexpart_v10.4/src && make serial ncf=yes
